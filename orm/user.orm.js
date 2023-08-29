@@ -43,7 +43,7 @@ export const createUserOrm = async (user) => {
 
     delete userCreate._doc.password;
 
-    let qrCcontent = `http://localhost:3000/qr/${userCreate._doc._id}/menu`;
+    let qrCcontent = `https://restaurantqr.netlify.app/${userCreate._doc._id}/menu`;
 
     qrCode.toDataURL(qrCcontent, function (err, url) {
       if (err) {
